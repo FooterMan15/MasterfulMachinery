@@ -69,7 +69,8 @@ public class ProjectorTileEntityRenderer extends TileEntityRenderer<ProjectorTil
             float b = (float) (color & 255) / 255.0F;
             matrixStackIn.push();
             matrixStackIn.translate(key.pos.getX(), key.pos.getY(), key.pos.getZ());
-            matrixStackIn.scale(0.7f, 0.7f, 0.7f);
+            matrixStackIn.scale(0.5f, 0.5f, 0.5f);
+            matrixStackIn.translate(0.5f, 0.5f, 0.5);
             brd.getBlockModelRenderer().renderModel(matrixStackIn.getLast(), bufferIn.getBuffer(RenderTypeLookup.func_239220_a_(blockState, false)), blockState, mdl, r,g,b, 0xF000F0, OverlayTexture.NO_OVERLAY, tile != null ? tile.getModelData() : EmptyModelData.INSTANCE);
             matrixStackIn.pop();
         }

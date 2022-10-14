@@ -55,6 +55,17 @@ public class ProjectorScreen extends ContainerScreen<ProjectorContainer> {
 
     @Override
     protected void drawGuiContainerForegroundLayer(MatrixStack matrixStack, int x, int y) {
+        Minecraft.getInstance().textureManager.bindTexture(SLOT_PARTS);
+        int xO = 60;
+        int yO = 20;
+        blit(matrixStack, 20 + xO, yO, 0, 26, 18, 18);
+        blit(matrixStack, xO, 20 + yO, 0, 26, 18, 18);
+        blit(matrixStack, 40 + xO, 20 + yO, 0, 26, 18, 18);
+        blit(matrixStack, 20 + xO, 40 + yO, 0, 26, 18, 18);
 
+        if (x > (xO + 20) && x > (xO + 38) &&
+                y > yO && y < yO + 18) {
+
+        }
     }
 }

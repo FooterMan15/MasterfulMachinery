@@ -41,4 +41,8 @@ public class ProjectorContainer extends Container {
     public ProjectorContainer(int windowId, PlayerInventory inv, PacketBuffer data) {
         this((ProjectorTile) inv.player.world.getTileEntity(data.readBlockPos()), inv, windowId);
     }
+
+    public void moveRender(int x, int y, int z) {
+        
+    }
 }

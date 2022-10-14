@@ -8,7 +8,9 @@ import net.minecraft.inventory.Inventory;
 import net.minecraft.inventory.container.Container;
 import net.minecraft.inventory.container.INamedContainerProvider;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.WallOrFloorItem;
 import net.minecraft.tileentity.TileEntity;
+import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.text.ITextComponent;
 import net.minecraft.util.text.StringTextComponent;
 
@@ -21,7 +23,7 @@ public class ProjectorTile extends TileEntity implements INamedContainerProvider
     }
 
     public Inventory blueprint = new Inventory(ItemStack.EMPTY);
-
+    public BlockPos.Mutable renderOffset = new BlockPos.Mutable(0,0,0);
 
     @Override
     public ITextComponent getDisplayName() {
