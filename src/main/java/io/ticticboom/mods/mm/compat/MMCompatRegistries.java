@@ -4,18 +4,15 @@ import io.ticticboom.mods.mm.Ref;
 import io.ticticboom.mods.mm.compat.jei.base.JeiPortTypeEntry;
 import io.ticticboom.mods.mm.compat.jei.base.JeiRecipeEntry;
 import io.ticticboom.mods.mm.compat.jei.port.*;
+import io.ticticboom.mods.mm.compat.jei.port.ae2.Ae2EnergyJeiPortTypeEntry;
 import io.ticticboom.mods.mm.compat.jei.port.mek.*;
 import io.ticticboom.mods.mm.compat.jei.recipe.PerTickJeiRecipeEntry;
 import io.ticticboom.mods.mm.compat.jei.recipe.SimpleJeiRecipeEntry;
 import io.ticticboom.mods.mm.recipedisplay.MMRecipeDisplayElement;
 import io.ticticboom.mods.mm.recipedisplay.image.ImageRecipeDisplayElement;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.ModList;
-import net.minecraftforge.fml.ModLoader;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
-import net.minecraftforge.fml.loading.FMLEnvironment;
 import net.minecraftforge.registries.IForgeRegistry;
 import net.minecraftforge.registries.NewRegistryEvent;
 import net.minecraftforge.registries.RegisterEvent;
@@ -55,6 +52,9 @@ public class MMCompatRegistries {
             event.register(JEI_PORTS.get().getRegistryKey(), Ref.Ports.MEK_INFUSE, MekInfuseJeiPortTypeEntry::new);
             event.register(JEI_PORTS.get().getRegistryKey(), Ref.Ports.MEK_PIGMENT, MekPigmentJeiPortTypeEntry::new);
             event.register(JEI_PORTS.get().getRegistryKey(), Ref.Ports.MEK_SLURRY, MekSlurryJeiPortTypeEntry::new);
+        }
+        if (ModList.get().isLoaded("ae2")) {
+            event.register(JEI_PORTS.get().getRegistryKey(), Ref.Ports.AE_ENERGY, Ae2EnergyJeiPortTypeEntry::new);
         }
     }
 
