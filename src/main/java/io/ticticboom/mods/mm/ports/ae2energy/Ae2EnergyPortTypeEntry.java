@@ -30,7 +30,7 @@ public class Ae2EnergyPortTypeEntry extends MMPortTypeEntry {
 
     @Override
     public ResourceLocation overlay(boolean input) {
-        return input ? Ref.res("block/base_ports/energy_input_cutout") : Ref.res("block/base_ports/energy_output_cutout");
+        return input ? Ref.res("block/base_ports/ae_energy_input_cutout") : Ref.res("block/base_ports/ae_energy_output_cutout");
     }
 
     @Override
