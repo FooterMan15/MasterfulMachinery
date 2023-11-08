@@ -221,6 +221,7 @@ dependencies {
     implementation fg.deobf("com.tterrag.registrate:Registrate:${registrate_version}")
 
     compileOnly "appeng:appliedenergistics2-forge:${ae2_version}:api"
+    implementation fg.deobf("curse.maven:applied-energistics-2-223794:4733119")
 
 }
 
