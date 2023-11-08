@@ -10,6 +10,7 @@ import io.ticticboom.mods.mm.compat.kube.recipe.RecipeEventHandler;
 import io.ticticboom.mods.mm.compat.kube.recipeentry.RecipeEntryEventHandler;
 import io.ticticboom.mods.mm.item.BlueprintItem;
 import io.ticticboom.mods.mm.item.StructureSelectorWand;
+import io.ticticboom.mods.mm.ports.ae2energy.Ae2EnergyPortTypeEntry;
 import io.ticticboom.mods.mm.ports.base.MMPortTypeEntry;
 import io.ticticboom.mods.mm.ports.createrotation.RotationPortTypeEntry;
 import io.ticticboom.mods.mm.ports.energy.EnergyPortTypeEntry;
@@ -136,6 +137,9 @@ public class MMRegistries {
             PORTS.put(Ref.Ports.MEK_SLURRY, new MekSlurryPortTypeEntry());
             PORTS.put(Ref.Ports.MEK_HEAT, new MekHeatPortTypeEntry());
             PORTS.put(Ref.Ports.MEK_LASER, new MekLaserPortTypeEntry());
+        }
+        if (ModList.get().isLoaded("ae2")) {
+            PORTS.put(Ref.Ports.AE_ENERGY, new Ae2EnergyPortTypeEntry());
         }
     }
 
